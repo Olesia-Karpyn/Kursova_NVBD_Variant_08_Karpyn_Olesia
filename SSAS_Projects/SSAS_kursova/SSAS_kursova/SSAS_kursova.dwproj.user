@@ -1,0 +1,29 @@
+<AnalysisServicesUserConfiguration xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0">
+  <Configurations>
+    <Configuration>
+      <Name>Development</Name>
+      <Options>
+        <UserIDs>
+          <ConfigurationSetting>
+            <Id>Conferences Dw</Id>
+            <Name>Conferences Dw</Name>
+            <Value xsi:type="xsd:string">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAE7O4pGd10EiM61aTWX23nQAAAAAeAAAAQwBvAG4AZgBlAHIAZQBuAGMAZQBzACAARAB3AAAAEGYAAAABAAAgAAAA0XZHQNN37YgutFMgfwtJ1B7I4/isQx2bCZ3mnEXz08IAAAAADoAAAAACAAAgAAAAe3/JMa2YViG/EUgBltfCnXG3jn46qqaoSBfO10YN1iwQAAAA230dV6UcByZUW2+h2oJoAEAAAAA58vFS5InKVXr3R8RX3wYeM1XNtZxiCz83SkMiXwT8abCpkL2X2ThOmDQyQp6Uohiuq4AqOPcCdIAZQ5oWJUvc</Value>
+          </ConfigurationSetting>
+        </UserIDs>
+        <UserPasswords>
+          <ConfigurationSetting>
+            <Id>Conferences Dw</Id>
+            <Name>Conferences Dw</Name>
+            <Value xsi:type="xsd:string">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAE7O4pGd10EiM61aTWX23nQAAAAAeAAAAQwBvAG4AZgBlAHIAZQBuAGMAZQBzACAARAB3AAAAEGYAAAABAAAgAAAA5WZDVEXPiEffNFcQOUVu6GgMjcCyWuggQmkqLYJjcBMAAAAADoAAAAACAAAgAAAA9sfP1yPHhqNs9ynu/dTyVdl6YGM5EACZ/7T3UXDa0CEQAAAATfe1RlPUlTxUSMI+d+Qv1kAAAAAyAXa2v8V1Yygai+qxwuEc7s5BW404W2qx3951atQAqJeeS/gUPRkm86v6PjUDpkgaSskte5IjbZl3V7rnWyiu</Value>
+          </ConfigurationSetting>
+        </UserPasswords>
+        <TargetServer>DESKTOP-BPQG95Q\LOCALHOST</TargetServer>
+        <TargetDatabase>SSAS_kursova</TargetDatabase>
+        <StartObject>
+          <ObjectId></ObjectId>
+          <ObjectType>Current</ObjectType>
+        </StartObject>
+      </Options>
+    </Configuration>
+  </Configurations>
+</AnalysisServicesUserConfiguration>

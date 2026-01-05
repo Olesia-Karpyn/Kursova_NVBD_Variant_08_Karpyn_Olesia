@@ -1,0 +1,363 @@
+﻿<DataSourceView xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="5a4d56df-6bb0-47bc-aa24-71e9deb22fa2" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>Conferences Dw</ID>
+  <Name>Conferences Dw</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:CurrentLayout</Name>
+      <Value>_ALL_TABLES_</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:SchemaRestriction</Name>
+      <Value></Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:RetrieveRelationships</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:Layouts</Name>
+      <Value>
+        <Layouts xmlns="">
+          <Diagram>
+            <Name>_ALL_TABLES_</Name>
+            <DiagramLayout />
+            <ShowRelationshipNames>False</ShowRelationshipNames>
+            <UseDiagramDefaultLayout>True</UseDiagramDefaultLayout>
+            <DiagramViewPortLeft>0</DiagramViewPortLeft>
+            <DiagramViewPortTop>0</DiagramViewPortTop>
+            <DiagramBoundingLeft>0</DiagramBoundingLeft>
+            <DiagramBoundingTop>0</DiagramBoundingTop>
+            <DiagramZoom>100</DiagramZoom>
+          </Diagram>
+        </Layouts>
+      </Value>
+    </Annotation>
+  </Annotations>
+  <DataSourceID>Conferences Dw</DataSourceID>
+  <Schema>
+    <xs:schema id="Conferences_x0020_Dw" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop">
+      <xs:element name="Conferences_x0020_Dw" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:design-time-name="835165e5-4ea0-4c51-83c1-04e3a1d0a124">
+        <xs:complexType>
+          <xs:choice minOccurs="0" maxOccurs="unbounded">
+            <xs:element name="dbo_Dim_Conference" msprop:DbTableName="Dim_Conference" msprop:FriendlyName="Dim_Conference" msprop:TableType="Table" msprop:DbSchemaName="dbo" msprop:design-time-name="818f0c7e-1a1b-41d9-b1db-1eddcbe8d101">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="ConferenceID" msprop:FriendlyName="ConferenceID" msprop:DbColumnName="ConferenceID" msprop:design-time-name="69adf651-b42b-4d1e-b477-3dd6d0db93be" type="xs:int" />
+                  <xs:element name="Name" msprop:FriendlyName="Name" msprop:DbColumnName="Name" msprop:design-time-name="e9239e35-9cf6-4b9c-a052-c11e0b9c8b94">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="255" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="StartDate" msprop:FriendlyName="StartDate" msprop:DbColumnName="StartDate" msprop:design-time-name="16c40bc7-501e-4500-b6ae-0312fe1e8ad4">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="10" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="EndDate" msprop:FriendlyName="EndDate" msprop:DbColumnName="EndDate" msprop:design-time-name="4883f1e9-7d17-4f09-870f-41e50e41c9c5">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="10" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="City" msprop:FriendlyName="City" msprop:DbColumnName="City" msprop:design-time-name="e9c72be6-3621-4256-948e-5f5ed0002adf">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="100" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_Dim_Equipment" msprop:DbTableName="Dim_Equipment" msprop:FriendlyName="Dim_Equipment" msprop:TableType="Table" msprop:DbSchemaName="dbo" msprop:design-time-name="5483bd23-d3d1-4d2a-bc92-66f1cdeae998">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="EquipmentID" msprop:FriendlyName="EquipmentID" msprop:DbColumnName="EquipmentID" msprop:design-time-name="6eea1b70-0d70-4d5e-b4c4-e161a78a5b7f" type="xs:int" />
+                  <xs:element name="Name" msprop:FriendlyName="Name" msprop:DbColumnName="Name" msprop:design-time-name="4943e2c7-ad3a-40df-b50e-911b67b08301">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="100" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_Dim_Room" msprop:DbTableName="Dim_Room" msprop:FriendlyName="Dim_Room" msprop:TableType="Table" msprop:DbSchemaName="dbo" msprop:design-time-name="de81c8c9-0cd1-4443-84e1-e15eda5b182b">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="RoomID" msprop:FriendlyName="RoomID" msprop:DbColumnName="RoomID" msprop:design-time-name="b7715b43-82a0-4a18-9bb0-1279b33518b2" type="xs:int" />
+                  <xs:element name="Name" msprop:FriendlyName="Name" msprop:DbColumnName="Name" msprop:design-time-name="95a06400-3230-4fda-af48-71991e30ddd8">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="100" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="Capacity" msprop:FriendlyName="Capacity" msprop:DbColumnName="Capacity" msprop:design-time-name="1bbf400a-82aa-4e84-aa85-2aec169ca1ea" type="xs:int" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_Dim_Section" msprop:DbTableName="Dim_Section" msprop:FriendlyName="Dim_Section" msprop:TableType="Table" msprop:DbSchemaName="dbo" msprop:design-time-name="c5c3bfd7-892b-46b0-b6de-f79729cc43c9">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="SectionID" msprop:FriendlyName="SectionID" msprop:DbColumnName="SectionID" msprop:design-time-name="bea927f6-9604-43e3-9c68-4c6d20e06492" type="xs:int" />
+                  <xs:element name="Name" msprop:FriendlyName="Name" msprop:DbColumnName="Name" msprop:design-time-name="90ec7175-935d-4dfd-94d1-b34f4862fb74">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="255" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="ConferenceID" msprop:FriendlyName="ConferenceID" msprop:DbColumnName="ConferenceID" msprop:design-time-name="670fb688-e55b-4e19-8a59-7afb24428301" type="xs:int" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_Dim_Speaker" msprop:DbTableName="Dim_Speaker" msprop:FriendlyName="Dim_Speaker" msprop:TableType="Table" msprop:DbSchemaName="dbo" msprop:design-time-name="3e91507f-1672-4e36-88df-4be96bcf6a70">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="SpeakerID" msprop:FriendlyName="SpeakerID" msprop:DbColumnName="SpeakerID" msprop:design-time-name="1a355f9a-7ae9-43e4-82b7-d4628983ab80" type="xs:int" />
+                  <xs:element name="FullName" msprop:FriendlyName="FullName" msprop:DbColumnName="FullName" msprop:design-time-name="ed9dc1cb-6485-4dec-8ef9-a2ad21a14801">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="255" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="Degree" msprop:FriendlyName="Degree" msprop:DbColumnName="Degree" msprop:design-time-name="10dae7ce-e307-432b-9f51-b4bd0be1b96d" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="Workplace" msprop:FriendlyName="Workplace" msprop:DbColumnName="Workplace" msprop:design-time-name="0deca80f-7b58-4a76-a97a-9c79090c9b50" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="255" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="ValidFrom" msprop:FriendlyName="ValidFrom" msprop:DbColumnName="ValidFrom" msprop:design-time-name="af68c173-472f-4bdf-b3d7-2745c2a73310">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="10" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="ValidTo" msprop:FriendlyName="ValidTo" msprop:DbColumnName="ValidTo" msprop:design-time-name="4513088a-d4cb-4f8a-b32e-b83c48bad269" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="10" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="IsCurrent" msprop:FriendlyName="IsCurrent" msprop:DbColumnName="IsCurrent" msprop:design-time-name="e8f82605-c4a8-45e3-b2b5-f5b231707e4e" type="xs:boolean" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_Dim_Time" msprop:DbTableName="Dim_Time" msprop:FriendlyName="Dim_Time" msprop:TableType="Table" msprop:DbSchemaName="dbo" msprop:design-time-name="7ed71bb8-516b-4c98-9500-34b3ab94b3e3">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="TimeID" msprop:FriendlyName="TimeID" msprop:DbColumnName="TimeID" msprop:design-time-name="3f71c8f1-6363-4c61-8af6-0de9e196326a" type="xs:int" />
+                  <xs:element name="Date" msprop:FriendlyName="Date" msprop:DbColumnName="Date" msprop:design-time-name="b8e9574f-473b-4d1e-b25b-11b667d085ec">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="10" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="Year" msprop:FriendlyName="Year" msprop:DbColumnName="Year" msprop:design-time-name="8075ef19-bcdf-4cb3-a782-96eb37800505" type="xs:int" />
+                  <xs:element name="Quarter" msprop:FriendlyName="Quarter" msprop:DbColumnName="Quarter" msprop:design-time-name="a0d3591b-7e8f-4444-b215-2ad4de35e789" type="xs:int" />
+                  <xs:element name="Month" msprop:FriendlyName="Month" msprop:DbColumnName="Month" msprop:design-time-name="1b7ff3db-126c-4acd-a5a0-f06729baa9dd" type="xs:int" />
+                  <xs:element name="Day" msprop:FriendlyName="Day" msprop:DbColumnName="Day" msprop:design-time-name="311742c1-da6c-4169-bb0e-2e187cd6e051" type="xs:int" />
+                  <xs:element name="DayOfWeek" msprop:FriendlyName="DayOfWeek" msprop:DbColumnName="DayOfWeek" msprop:design-time-name="4dd7e8d5-2d2e-46b2-91d8-ff8c4143b9b4" type="xs:int" />
+                  <xs:element name="IsHoliday" msprop:FriendlyName="IsHoliday" msprop:DbColumnName="IsHoliday" msprop:design-time-name="f209a2c3-18d4-4a90-a83e-a31594e77c0a" type="xs:boolean" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_Dim_Topic" msprop:DbTableName="Dim_Topic" msprop:FriendlyName="Dim_Topic" msprop:TableType="Table" msprop:DbSchemaName="dbo" msprop:design-time-name="3df6f599-3d1f-4a67-8197-b78fd138f8fa">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="TopicID" msprop:FriendlyName="TopicID" msprop:DbColumnName="TopicID" msprop:design-time-name="daa34b50-736d-457a-8928-027ef4e7e552" type="xs:int" />
+                  <xs:element name="Name" msprop:FriendlyName="Name" msprop:DbColumnName="Name" msprop:design-time-name="7cf25a4c-4050-4e08-abdb-630e149a568e">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="100" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_ETL_Error_Log" msprop:DbTableName="ETL_Error_Log" msprop:FriendlyName="ETL_Error_Log" msprop:TableType="Table" msprop:DbSchemaName="dbo" msprop:design-time-name="4ba8e519-4426-4ebc-bbb9-2e499b98b6e4">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="ErrorID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:FriendlyName="ErrorID" msprop:DbColumnName="ErrorID" msprop:design-time-name="58998a60-1965-493f-b7a0-459d4011cf37" type="xs:int" />
+                  <xs:element name="PackageName" msprop:FriendlyName="PackageName" msprop:DbColumnName="PackageName" msprop:design-time-name="18c87533-f99f-4544-9aa1-4de3e126c1cf" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="255" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="ErrorDescription" msprop:FriendlyName="ErrorDescription" msprop:DbColumnName="ErrorDescription" msprop:design-time-name="4eba9c46-84d3-41eb-a959-824e7206348e" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="1073741823" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="ErrorTime" msprop:FriendlyName="ErrorTime" msprop:DbColumnName="ErrorTime" msprop:design-time-name="7a7a878f-3bd1-4fde-b776-cc26fb6e4588" type="xs:dateTime" minOccurs="0" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_ETL_Package_Log" msprop:DbTableName="ETL_Package_Log" msprop:FriendlyName="ETL_Package_Log" msprop:TableType="Table" msprop:DbSchemaName="dbo" msprop:design-time-name="4b3910f8-a874-4a62-95dd-1c01b9d79674">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="LogID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:FriendlyName="LogID" msprop:DbColumnName="LogID" msprop:design-time-name="fd884eac-1997-4760-b2f5-43b23d05230f" type="xs:int" />
+                  <xs:element name="PackageName" msprop:FriendlyName="PackageName" msprop:DbColumnName="PackageName" msprop:design-time-name="4ebc58ed-b1a2-4d94-8d02-4f7d4914dc89" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="255" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="StartTime" msprop:FriendlyName="StartTime" msprop:DbColumnName="StartTime" msprop:design-time-name="2b8010c1-cf67-46b4-87d6-55e8a72a5c0e" type="xs:dateTime" minOccurs="0" />
+                  <xs:element name="EndTime" msprop:FriendlyName="EndTime" msprop:DbColumnName="EndTime" msprop:design-time-name="7c8c3fec-c188-4b06-8bb4-bfbed3cf48c7" type="xs:dateTime" minOccurs="0" />
+                  <xs:element name="Status" msprop:FriendlyName="Status" msprop:DbColumnName="Status" msprop:design-time-name="5d47aed8-bd79-45ce-a1ee-f256727c0d6a" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="RowsProcessed" msprop:FriendlyName="RowsProcessed" msprop:DbColumnName="RowsProcessed" msprop:design-time-name="0587e934-a462-4dbd-9acd-03dbab20f872" type="xs:int" minOccurs="0" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_Fact_Equipment_Usage" msprop:DbTableName="Fact_Equipment_Usage" msprop:FriendlyName="Fact_Equipment_Usage" msprop:TableType="Table" msprop:DbSchemaName="dbo" msprop:design-time-name="5cbd8a62-8bd3-40fa-ad4f-ab3947cb1f5e">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="FactEquipmentID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:FriendlyName="FactEquipmentID" msprop:DbColumnName="FactEquipmentID" msprop:design-time-name="3f3ba712-b830-485a-b72e-1333c408deb5" type="xs:int" />
+                  <xs:element name="RoomID" msprop:FriendlyName="RoomID" msprop:DbColumnName="RoomID" msprop:design-time-name="72cc285f-a165-479c-9c8f-0c0921975115" type="xs:int" />
+                  <xs:element name="EquipmentID" msprop:FriendlyName="EquipmentID" msprop:DbColumnName="EquipmentID" msprop:design-time-name="55358d80-e518-40d9-9ace-1ae3c45bcd23" type="xs:int" />
+                  <xs:element name="Quantity" msprop:FriendlyName="Quantity" msprop:DbColumnName="Quantity" msprop:design-time-name="9b638c16-cd80-4099-9ab5-fd61568f95b7" type="xs:int" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_Fact_Talks" msprop:DbTableName="Fact_Talks" msprop:FriendlyName="Fact_Talks" msprop:TableType="Table" msprop:DbSchemaName="dbo" msprop:design-time-name="5ef54e76-ffa6-42fa-9269-d6d022743036">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="FactTalkID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:FriendlyName="FactTalkID" msprop:DbColumnName="FactTalkID" msprop:design-time-name="e6a3f220-fe54-40de-b9bb-66cbe94c326c" type="xs:int" />
+                  <xs:element name="TalkID" msprop:FriendlyName="TalkID" msprop:DbColumnName="TalkID" msprop:design-time-name="2d2c023a-5c58-4295-a202-52a8c6cb7b54" type="xs:int" />
+                  <xs:element name="SectionID" msprop:FriendlyName="SectionID" msprop:DbColumnName="SectionID" msprop:design-time-name="12cb7440-6fde-496f-840e-1952e436a979" type="xs:int" />
+                  <xs:element name="SpeakerID" msprop:FriendlyName="SpeakerID" msprop:DbColumnName="SpeakerID" msprop:design-time-name="eef96431-3a8b-4f38-9b06-920ce7677448" type="xs:int" />
+                  <xs:element name="RoomID" msprop:FriendlyName="RoomID" msprop:DbColumnName="RoomID" msprop:design-time-name="b9750e70-6276-4bd3-a6a9-296bce43cfb7" type="xs:int" />
+                  <xs:element name="TopicID" msprop:FriendlyName="TopicID" msprop:DbColumnName="TopicID" msprop:design-time-name="1bad4048-a787-4513-9d26-abdbb95c9644" type="xs:int" />
+                  <xs:element name="ConferenceID" msprop:FriendlyName="ConferenceID" msprop:DbColumnName="ConferenceID" msprop:design-time-name="ad603854-7c95-44dc-a79c-537482f4b844" type="xs:int" />
+                  <xs:element name="StartTimeID" msprop:FriendlyName="StartTimeID" msprop:DbColumnName="StartTimeID" msprop:design-time-name="11672eb0-391d-4aea-9fe0-e1727135d830" type="xs:int" />
+                  <xs:element name="DurationMinutes" msprop:FriendlyName="DurationMinutes" msprop:DbColumnName="DurationMinutes" msprop:design-time-name="89e0afac-af48-45ac-a11c-a6d2f9a5d1c1" type="xs:int" />
+                  <xs:element name="AudienceCount" msprop:FriendlyName="AudienceCount" msprop:DbColumnName="AudienceCount" msprop:design-time-name="52a71d88-44a8-4230-bd55-59601221f2ed" type="xs:int" minOccurs="0" />
+                  <xs:element name="SpeakerSK" msprop:FriendlyName="SpeakerSK" msprop:DbColumnName="SpeakerSK" msprop:design-time-name="0e9a9886-feec-484f-964a-a3b8be4d7304" type="xs:int" minOccurs="0" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          </xs:choice>
+        </xs:complexType>
+        <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_Dim_Conference" />
+          <xs:field xpath="ConferenceID" />
+        </xs:unique>
+        <xs:unique name="dbo_Dim_Equipment_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_Dim_Equipment" />
+          <xs:field xpath="EquipmentID" />
+        </xs:unique>
+        <xs:unique name="dbo_Dim_Room_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_Dim_Room" />
+          <xs:field xpath="RoomID" />
+        </xs:unique>
+        <xs:unique name="dbo_Dim_Section_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_Dim_Section" />
+          <xs:field xpath="SectionID" />
+        </xs:unique>
+        <xs:unique name="dbo_Dim_Speaker_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_Dim_Speaker" />
+          <xs:field xpath="SpeakerID" />
+        </xs:unique>
+        <xs:unique name="dbo_Dim_Time_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_Dim_Time" />
+          <xs:field xpath="TimeID" />
+        </xs:unique>
+        <xs:unique name="dbo_Dim_Topic_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_Dim_Topic" />
+          <xs:field xpath="TopicID" />
+        </xs:unique>
+        <xs:unique name="dbo_ETL_Error_Log_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_ETL_Error_Log" />
+          <xs:field xpath="ErrorID" />
+        </xs:unique>
+        <xs:unique name="dbo_ETL_Package_Log_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_ETL_Package_Log" />
+          <xs:field xpath="LogID" />
+        </xs:unique>
+        <xs:unique name="dbo_Fact_Equipment_Usage_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_Fact_Equipment_Usage" />
+          <xs:field xpath="FactEquipmentID" />
+        </xs:unique>
+        <xs:unique name="dbo_Fact_Talks_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_Fact_Talks" />
+          <xs:field xpath="FactTalkID" />
+        </xs:unique>
+        <xs:keyref name="FK__Fact_Talk__Speak__47DBAE45" refer="dbo_Dim_Speaker_Constraint1">
+          <xs:selector xpath=".//dbo_Fact_Talks" />
+          <xs:field xpath="SpeakerID" />
+        </xs:keyref>
+        <xs:keyref name="FK__Fact_Talk__Secti__46E78A0C" refer="dbo_Dim_Section_Constraint1">
+          <xs:selector xpath=".//dbo_Fact_Talks" />
+          <xs:field xpath="SectionID" />
+        </xs:keyref>
+        <xs:keyref name="FK__Fact_Talk__Start__4BAC3F29" refer="dbo_Dim_Time_Constraint1">
+          <xs:selector xpath=".//dbo_Fact_Talks" />
+          <xs:field xpath="StartTimeID" />
+        </xs:keyref>
+        <xs:keyref name="FK__Fact_Talk__RoomI__48CFD27E" refer="dbo_Dim_Room_Constraint1">
+          <xs:selector xpath=".//dbo_Fact_Talks" />
+          <xs:field xpath="RoomID" />
+        </xs:keyref>
+        <xs:keyref name="FK__Fact_Talk__Confe__4AB81AF0" refer="Constraint1">
+          <xs:selector xpath=".//dbo_Fact_Talks" />
+          <xs:field xpath="ConferenceID" />
+        </xs:keyref>
+        <xs:keyref name="FK__Fact_Talk__Topic__49C3F6B7" refer="dbo_Dim_Topic_Constraint1">
+          <xs:selector xpath=".//dbo_Fact_Talks" />
+          <xs:field xpath="TopicID" />
+        </xs:keyref>
+        <xs:keyref name="FK__Fact_Equi__RoomI__5EBF139D" refer="dbo_Dim_Room_Constraint1">
+          <xs:selector xpath=".//dbo_Fact_Equipment_Usage" />
+          <xs:field xpath="RoomID" />
+        </xs:keyref>
+        <xs:keyref name="FK__Fact_Equi__Equip__5FB337D6" refer="dbo_Dim_Equipment_Constraint1">
+          <xs:selector xpath=".//dbo_Fact_Equipment_Usage" />
+          <xs:field xpath="EquipmentID" />
+        </xs:keyref>
+        <xs:keyref name="FK__Dim_Secti__Confe__398D8EEE" refer="Constraint1">
+          <xs:selector xpath=".//dbo_Dim_Section" />
+          <xs:field xpath="ConferenceID" />
+        </xs:keyref>
+      </xs:element>
+    </xs:schema>
+    <Conferences_x0020_Dw xmlns="" />
+  </Schema>
+</DataSourceView>
