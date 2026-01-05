@@ -1,0 +1,92 @@
+USE conferences_db;
+GO
+
+CREATE TABLE conferences (
+    id INT PRIMARY KEY,
+    name NVARCHAR(255) NOT NULL,
+    start_date DATE NOT NULL,
+    end_date DATE NOT NULL,
+    city NVARCHAR(100) NOT NULL
+);
+
+
+CREATE TABLE sections (
+    id INT PRIMARY KEY,
+    conference_id INT NOT NULL,
+    name NVARCHAR(255) NOT NULL,
+    CONSTRAINT fk_sections_conference
+        FOREIGN KEY (conference_id)
+        REFERENCES conferences(id)
+        ON DELETE CASCADE
+);
+
+
+CREATE TABLE topics (
+    id INT PRIMARY KEY,
+    name NVARCHAR(100) NOT NULL
+);
+
+
+CREATE TABLE speakers (
+    id INT PRIMARY KEY,
+    full_name NVARCHAR(255) NOT NULL,
+    degree NVARCHAR(50) NOT NULL,
+    workplace NVARCHAR(255) NOT NULL
+);
+
+
+CREATE TABLE rooms (
+    id INT PRIMARY KEY,
+    name NVARCHAR(100) NOT NULL,
+    capacity INT NOT NULL
+);
+
+
+CREATE TABLE equipment (
+    id INT PRIMARY KEY,
+    name NVARCHAR(100) NOT NULL
+);
+
+
+CREATE TABLE room_equipment (
+    room_id INT NOT NULL,
+    equipment_id INT NOT NULL,
+    quantity INT NULL,
+    CONSTRAINT pk_room_equipment PRIMARY KEY (room_id, equipment_id),
+    CONSTRAINT fk_re_room
+        FOREIGN KEY (room_id)
+        REFERENCES rooms(id)
+        ON DELETE CASCADE,
+    CONSTRAINT fk_re_equipment
+        FOREIGN KEY (equipment_id)
+        REFERENCES equipment(id)
+        ON DELETE CASCADE
+);
+
+
+CREATE TABLE talks (
+    id INT PRIMARY KEY,
+    section_id INT NOT NULL,
+    speaker_id INT NOT NULL,
+    room_id INT NOT NULL,
+    topic_id INT NOT NULL,
+    title NVARCHAR(255) NOT NULL,
+    start_time DATETIME NOT NULL,
+    end_time DATETIME NOT NULL,
+    CONSTRAINT fk_talks_section
+        FOREIGN KEY (section_id)
+        REFERENCES sections(id)
+        ON DELETE CASCADE,
+    CONSTRAINT fk_talks_speaker
+        FOREIGN KEY (speaker_id)
+        REFERENCES speakers(id)
+        ON DELETE CASCADE,
+    CONSTRAINT fk_talks_room
+        FOREIGN KEY (room_id)
+        REFERENCES rooms(id)
+        ON DELETE CASCADE,
+    CONSTRAINT fk_talks_topic
+        FOREIGN KEY (topic_id)
+        REFERENCES topics(id)
+        ON DELETE CASCADE
+);
